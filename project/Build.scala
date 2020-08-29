@@ -10,7 +10,6 @@ import Keys._
 import com.typesafe.tools.mima.plugin.MimaPlugin.autoImport._
 import de.heikoseeberger.sbtheader.HeaderPlugin.autoImport._
 import ScriptedPlugin.autoImport._
-
 import java.util.Arrays
 
 import scala.collection.mutable
@@ -21,7 +20,7 @@ import scala.util.Properties
 import org.scalajs.ir
 
 import org.scalajs.sbtplugin._
-import org.scalajs.jsenv.{JSEnv, RunConfig, Input}
+import org.scalajs.jsenv.{Input, JSEnv, RunConfig}
 import org.scalajs.jsenv.JSUtils.escapeJS
 import org.scalajs.jsenv.nodejs.NodeJSEnv
 
@@ -30,6 +29,7 @@ import ExternalCompile.scalaJSExternalCompileSettings
 import Loggers._
 
 import org.scalajs.linker.interface._
+import sbt.internal.inc.Analysis
 
 /* Things that we want to expose in the sbt command line (and hence also in
  * `ci/matrix.xml`).
